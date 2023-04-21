@@ -7,8 +7,8 @@ RUN apt-get install tor -y
 RUN mkdir -p /var/lib/tor/my_website/
 RUN chmod 700 /var/lib/tor/my_website/
 RUN chown -R debian-tor /var/lib/tor/my_website/
-#RUN echo "HiddenServiceDir /var/lib/tor/my_website/" > /etc/tor/torrc \
-#	&& echo "HiddenServicePort 80 127.0.0.1:80" >> /etc/tor/torrc
+RUN echo "HiddenServiceDir /var/lib/tor/my_website/" > /etc/tor/torrc \
+	&& echo "HiddenServicePort 80 127.0.0.1:80" >> /etc/tor/torrc
 
 
 RUN echo "Up to you" > /usr/share/nginx/html/index.html
@@ -17,3 +17,5 @@ RUN echo "Up to you" > /usr/share/nginx/html/index.html
 EXPOSE 80
 EXPOSE 4242
 EXPOSE 9050
+
+CMD ["/bin/bash"]
