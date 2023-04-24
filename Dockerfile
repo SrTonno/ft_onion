@@ -14,7 +14,6 @@ COPY files/script_start.sh /root/script_start.sh
 COPY files/sshd_config /etc/ssh/sshd_config
 COPY files/index.html /usr/share/nginx/html/index.html
 
-#RUN echo "Port 4242" >> /etc/ssh/sshd_config
 
 EXPOSE 80
 EXPOSE 4242
