@@ -1,9 +1,18 @@
 Include /etc/ssh/sshd_config.d/*.conf
 ChallengeResponseAuthentication no
 UsePAM yes
-X11Forwarding yes
+
 PrintMotd no
 AcceptEnv LANG LC_*
 Subsystem	sftp	/usr/lib/openssh/sftp-server
+
 Port 4242
-#PermitRootLogin no
+PermitRootLogin no
+AllowUsers user42
+Protocol 2
+MaxAuthTries 2
+LoginGraceTime 42s
+ClientAliveInterval 420
+X11Forwarding no
+UseDNS no
+LogLevel VERBOSE
