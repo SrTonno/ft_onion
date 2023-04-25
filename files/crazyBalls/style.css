@@ -1,0 +1,193 @@
+body {
+  background-image: linear-gradient(to right, hsl(210, 100%, 56%) 5%, #fff 50%, hsl(210, 100%, 56%) 95%);
+}
+
+h1 {
+  font-family: 'Bungee Inline', Verdana, sans-serif;
+  color: #e65b77;
+  font-size: 2.5em;
+  text-align: center;
+  text-shadow: 0 0 12px #fff, 0 0 12px #fff;
+  margin: 0;
+}
+
+.container {
+  background-color: #ff0;
+  border: 5px dashed #f00;
+  border-radius: 5px;
+  width: 450px;
+  height: 350px;
+  position: relative;
+  margin: 25px auto 0;
+}
+
+.container__message {
+  color: #e34363;
+  font-family: Verdana, sans-serif;
+  font-size: small;
+  text-shadow: 0 0 6px #fff, 0 0 6px #fff;
+  position: absolute;
+  top: -30px;
+  margin: 0;
+}
+
+.sprite {
+  background-image: linear-gradient(to right, #A52A2A 33%, #ebf6f9 50%, hsl(0, 59%, 50%) 67%);
+  border: 4px dashed #FF7F50;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+}
+
+@keyframes anim-topLeft {
+  from {top: 0px; left: 0px; transform:rotate(0deg);}
+  to {top: 300px; left: 400px; transform:rotate(360deg);}
+}
+
+.sprite__topLeft {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  animation: anim-topLeft 4s ease-in-out 4s infinite alternate;
+  text-align: center;
+  line-height: 45px; 
+}
+
+.sprite__topLeft p {
+  color: #4B0082;
+  line-height: 1;
+  vertical-align: middle;
+  display: inline-block;
+  visibility: hidden;
+}
+
+div.sprite__topLeft:hover p {
+  visibility: visible;
+}
+
+@keyframes anim-topRight {
+  from {top:0px, right:0px; transform:rotate(0deg);}
+  to {top:300px; right:400px; transform:rotate(360deg);}
+}
+
+.sprite__topRight {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  animation: anim-topRight 4s ease-in-out 4s infinite alternate;
+}
+
+div.sprite__topRight:hover {
+  background-image: linear-gradient(to right, #A52A2A 33%, hsl(193, 54%, 70%) 50%, hsl(0, 59%, 50%) 67%);
+}
+
+@keyframes anim-bottomLeft {
+  0% {bottom:0px; left:0px;}
+  100% {bottom:300px; left:400px;}
+}
+
+.sprite__bottomLeft {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  animation: anim-bottomLeft 4s linear 4s infinite alternate;
+  transition: transform 3s linear 0s;
+}
+
+div.sprite__bottomLeft:hover {
+  transform:rotate(360deg);
+}
+
+@keyframes anim-bottomRight {
+  0% {bottom:0px; right:0px; transform:rotate(0deg);}
+  100% {bottom:300px; right:400px; transform:rotate(-360deg);}
+}
+
+.sprite__bottomRight {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  animation: anim-bottomRight 4s linear 4s infinite alternate;
+}
+
+div.sprite__bottomRight:hover {
+  animation-play-state: paused;
+}
+
+@keyframes anim-topCenter {
+  from {top:0px; left:200px; transform:rotate(0deg);}
+  to {top:300px; left:200px; transform:rotate(-360deg);}
+}
+
+.sprite__topCenter {
+  position: absolute;
+  top: 0px;
+  left: 200px;
+  animation: anim-topCenter 4s linear 6s infinite alternate;
+}
+
+div.sprite__topCenter:hover {
+  border-style: dotted dashed solid double;
+  border-color: #0000CD;
+  border-width: 6px;
+}
+
+@keyframes anim-bottomCenter {
+  from {bottom:0px; right:200px; transform:rotate(0deg);}
+  to {bottom:300px; right:200px; transform:rotate(360deg);}
+}
+
+.sprite__bottomCenter {
+  position: absolute;
+  bottom: 0px;
+  right: 200px;
+  animation: anim-bottomCenter 4s linear 6s infinite alternate;
+}
+
+div.sprite__bottomCenter:hover {
+  border: 6px dashed #00f;
+}
+
+.middleLine {
+  background-color: red;
+  width: 3px;
+  height: 350px;
+  margin: auto;
+}
+
+div.middleLine:hover {
+  background-color: #00f;
+}
+
+button {
+  background-color: #DC143C;
+  color: #fff;
+  border-radius: 5px;
+  border-color: #DC143C;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  display: block;
+  position: absolute;
+  left: 175px;
+  top: 375px;
+}
+
+button span:after {
+  content: "!!";
+  opacity: 0;
+  transition: 0.1s;
+}
+
+button:hover {
+  background-color: #f00;
+}
+
+button:hover ~ div {
+  animation-play-state: paused;
+}
+
+button:hover span:after {
+  opacity: 1;
+}
