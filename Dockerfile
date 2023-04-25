@@ -4,7 +4,8 @@ RUN apt-get update -y && \
 	apt-get upgrade -y && \
 	apt-get install tor openssh-server -y
 
-RUN useradd -m -s /bin/bash user42 && echo "user42:uptoyou" | chpasswd
+RUN useradd -m -s /bin/bash user42 && \
+	echo "user42:uptoyou" | chpasswd
 RUN mkdir -p /var/lib/tor/my_website/ && \
 	chmod 700 /var/lib/tor/my_website/ && \
 	chown -R debian-tor /var/lib/tor/my_website/
