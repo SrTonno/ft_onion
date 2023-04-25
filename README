@@ -1,8 +1,10 @@
->crear imagen
->>docker build -t ft_onion .
->crear contenedor
->>docker container run -it -p 4242:4242 -p 9050:9050 -p 80:80 --name "web_tor" ft_onion
->Para optener el dominio
->>/var/lib/tor/my_website/hostname
-	O
->>/root/domain_onion.txt
+# FT Onion - Proyecto de Onion Service
+
+Este proyecto es un ejemplo de cómo crear un servicio Onion utilizando Docker y Tor.
+
+## Crear imagen
+
+Para crear la imagen Docker del proyecto, ejecuta el siguiente comando en la raíz del proyecto:
+
+```bash
+docker build -t ft_onion .
