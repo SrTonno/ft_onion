@@ -7,7 +7,7 @@ Este proyecto es un ejemplo de cómo crear un servicio Onion utilizando Docker y
 Para crear la imagen Docker del proyecto, ejecuta el siguiente comando en la raíz del proyecto:
 
 `
-docker build -t ft_onion .
+'docker build -t ft_onion .'
 ´
 
 ### Crear contenedor
