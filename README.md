@@ -1,6 +1,8 @@
 
 # FT Onion - Proyecto de Onion Service
-
+<center>
+<img src="https://www.gifss.com/alimentos/cebollas/cebolla.gif" alt="Animación de una cebolla">
+</center>
 Este proyecto es un ejemplo de cómo crear un servicio Onion utilizando Docker y Tor.
 
 ## Crear imagen
