@@ -15,7 +15,7 @@ Para crear la imagen Docker del proyecto, ejecuta el siguiente comando en la raÃ
 
 Una vez que tengas la imagen Docker creada, puedes crear un contenedor para ejecutar el servicio Onion. Ejecuta el siguiente comando:
 
-> docker container run -it -p 4242:4242 -p 9050:9050 -p 80:80 --name "web_tor" ft_onion
+> docker container run -it -p 4242:4242 -p 80:80 --name "web_tor" ft_onion
 
 
 
